@@ -5179,7 +5179,7 @@ button.close {
 
 .fa, .block-superfish #superfish-1-toggle:before,
 .block-superfish #superfish-2-toggle:before, .block-superfish #superfish-1-toggle.sf-expanded:before,
-.block-superfish #superfish-2-toggle.sf-expanded:before, .block-superfish .sf-horizontal a.sf-depth-1.menuparent:before, .form-type-select:after {
+.block-superfish #superfish-2-toggle.sf-expanded:before, .block-superfish .sf-horizontal a.sf-depth-1.menuparent:before, .panel-title a:before, .panel-title a.collapsed:before, .form-type-select:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -5237,11 +5237,11 @@ button.close {
   float: right; }
 
 .fa.fa-pull-left, .block-superfish .fa-pull-left#superfish-1-toggle:before,
-.block-superfish .fa-pull-left#superfish-2-toggle:before, .block-superfish .sf-horizontal a.fa-pull-left.sf-depth-1.menuparent:before, .fa-pull-left.form-type-select:after {
+.block-superfish .fa-pull-left#superfish-2-toggle:before, .block-superfish .sf-horizontal a.fa-pull-left.sf-depth-1.menuparent:before, .panel-title a.fa-pull-left:before, .fa-pull-left.form-type-select:after {
   margin-right: .3em; }
 
 .fa.fa-pull-right, .block-superfish .fa-pull-right#superfish-1-toggle:before,
-.block-superfish .fa-pull-right#superfish-2-toggle:before, .block-superfish .sf-horizontal a.fa-pull-right.sf-depth-1.menuparent:before, .fa-pull-right.form-type-select:after {
+.block-superfish .fa-pull-right#superfish-2-toggle:before, .block-superfish .sf-horizontal a.fa-pull-right.sf-depth-1.menuparent:before, .panel-title a.fa-pull-right:before, .fa-pull-right.form-type-select:after {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -5252,11 +5252,11 @@ button.close {
   float: left; }
 
 .fa.pull-left, .block-superfish .pull-left#superfish-1-toggle:before,
-.block-superfish .pull-left#superfish-2-toggle:before, .block-superfish .sf-horizontal a.pull-left.sf-depth-1.menuparent:before, .pull-left.form-type-select:after {
+.block-superfish .pull-left#superfish-2-toggle:before, .block-superfish .sf-horizontal a.pull-left.sf-depth-1.menuparent:before, .panel-title a.pull-left:before, .pull-left.form-type-select:after {
   margin-right: .3em; }
 
 .fa.pull-right, .block-superfish .pull-right#superfish-1-toggle:before,
-.block-superfish .pull-right#superfish-2-toggle:before, .block-superfish .sf-horizontal a.pull-right.sf-depth-1.menuparent:before, .pull-right.form-type-select:after {
+.block-superfish .pull-right#superfish-2-toggle:before, .block-superfish .sf-horizontal a.pull-right.sf-depth-1.menuparent:before, .panel-title a.pull-right:before, .pull-right.form-type-select:after {
   margin-left: .3em; }
 
 .fa-spin {
@@ -5648,10 +5648,10 @@ button.close {
 .fa-compress:before {
   content: ""; }
 
-.fa-plus:before {
+.fa-plus:before, .panel-title a.collapsed:before {
   content: ""; }
 
-.fa-minus:before {
+.fa-minus:before, .panel-title a:before {
   content: ""; }
 
 .fa-asterisk:before {
@@ -7613,6 +7613,17 @@ pre {
       border-top: 1px solid rgba(255, 255, 255, 0.05); }
       .block-superfish .sf-accordion li a.sf-depth-1 {
         background: #2b2b2b; }
+
+.panel-default > .panel-heading, .block-menu-block > .panel-heading, .block-menu-block .panel-default > .block__title, .block-menu-block > .block__title {
+  margin: 0;
+  background: #444;
+  color: #fff; }
+
+.panel-title {
+  font-size: 1.6rem;
+  font-weight: 700; }
+  .panel-title a:before {
+    margin-right: 0.3em; }
 
 .btn .bs-icon-right, .btn .fa-icon-right {
   margin-left: 0.5em; }

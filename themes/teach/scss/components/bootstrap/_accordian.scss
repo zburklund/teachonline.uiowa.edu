@@ -1,0 +1,23 @@
+.panel-default > .panel-heading {
+  margin: 0;
+  background: #444;
+  color: #fff;
+}
+
+.panel-title {
+  font-size: 1.6rem;
+  font-weight: $fw-bold;
+
+  a {
+    &:before {
+      @include fa(minus);
+      margin-right: 0.3em;
+    }
+  }
+
+  a.collapsed {
+    &:before {
+      @include fa(plus);
+    }
+  }
+}
