@@ -3,6 +3,7 @@ description = Core and shared configuration for teachonline.uiowa.edu
 core = 7.x
 package = Teach Online
 dependencies[] = ctools
+dependencies[] = diff
 dependencies[] = features
 dependencies[] = jquery_update
 dependencies[] = menu_block
