@@ -7537,6 +7537,10 @@ pre {
   margin: 0;
   background: #444;
   color: #fff; }
+  .block-menu-block .block__title a {
+    color: #fff; }
+    .block-menu-block .block__title a:hover, .block-menu-block .block__title a:focus {
+      text-decoration: underline; }
 
 .block-menu-block li > ul.nav li a {
   padding-left: 35px; }

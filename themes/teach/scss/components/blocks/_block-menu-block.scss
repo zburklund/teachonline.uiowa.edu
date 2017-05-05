@@ -10,6 +10,14 @@
     margin: 0;
     background: #444;
     color: #fff;
+
+    a {
+      color: #fff;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 
   li > ul.nav li a {
