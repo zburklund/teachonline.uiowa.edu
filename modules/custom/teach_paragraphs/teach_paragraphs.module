@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Teach Paragraphs feature.
+ */
+
+include_once 'teach_paragraphs.features.inc';

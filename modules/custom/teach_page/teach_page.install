@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_install.
+ */
+function teach_page_install() {
+  // Delete body field.
+  $instance = field_info_instance('node', 'body', 'page');
+  field_delete_instance($instance);
+  field_cache_clear();
+  field_purge_batch(100);
+}
