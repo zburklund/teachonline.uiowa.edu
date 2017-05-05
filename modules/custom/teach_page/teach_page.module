@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Teach Online Page feature.
+ */
+
+include_once 'teach_page.features.inc';
