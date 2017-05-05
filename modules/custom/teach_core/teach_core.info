@@ -106,4 +106,5 @@ features[variable][] = superfish_wraphlt_1
 features[variable][] = superfish_wrapmul_1
 features[variable][] = superfish_wrapul_1
 features[variable][] = superfish_zebra_1
+features[variable][] = theme_teach_settings
 project path = sites/teachonline.uiowa.edu/modules/custom
