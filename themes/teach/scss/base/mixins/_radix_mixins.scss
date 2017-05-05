@@ -56,8 +56,11 @@
   @else if $class == lg {
     @media (min-width: $screen-lg) { @content; }
   }
+  @else if $class == sf-expanded {
+    @media (min-width: $sf-expanded) { @content; }
+  }
   @else {
-    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, sf-expanded";
   }
 }
 

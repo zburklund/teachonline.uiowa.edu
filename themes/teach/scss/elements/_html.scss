@@ -1,4 +1,5 @@
 html {
   font-size: $font-size-root;
   overflow-x: hidden;
+  @extend .font-smoothing-on;
 }

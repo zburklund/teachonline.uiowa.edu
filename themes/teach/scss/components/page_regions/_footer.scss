@@ -1,0 +1,28 @@
+.footer {
+  background-color: $brand-black;
+  color: #fff;
+  @extend .font-smoothing-on;
+  padding: 4rem 0;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: #aaa;
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      color: $brand-yellow;
+    }
+  }
+
+  .block-masquerade {
+    clear: both;
+  }
+
+  .block__title {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid $brand-grey;
+  }
+}

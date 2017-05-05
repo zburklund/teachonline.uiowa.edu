@@ -1,0 +1,24 @@
+.form-select {
+  @include appearance(none);
+  padding-right: 3rem !important;
+}
+
+.form-type-select {
+  position: relative;
+  display: block;
+
+
+  &:after {
+    content: $fa-var-caret-down;
+    @extend .fa;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+}

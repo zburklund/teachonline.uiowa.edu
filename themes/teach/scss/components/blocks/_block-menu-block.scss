@@ -1,0 +1,18 @@
+.block-menu-block {
+  @extend .panel;
+  @extend .panel-default;
+
+  .block__title {
+    @extend .panel-heading;
+    @extend .font-smoothing-on;
+    font-size: 1.6rem;
+    font-weight: $fw-bold;
+    margin: 0;
+    background: #444;
+    color: #fff;
+  }
+
+  li > ul.nav li a {
+    padding-left: 35px;
+  }
+}

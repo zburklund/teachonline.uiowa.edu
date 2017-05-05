@@ -1,0 +1,130 @@
+$sf-color: $brand-yellow;
+$anchor-padding-width: 1rem;
+$anchor-padding-height: 1rem;
+$dropdown-items-bg: #333;
+$accordion-items-bg: #333;
+
+.block-superfish {
+  position: static;
+  font-weight: $fw-bold;
+
+  .block__title {
+    @extend .sr-only;
+  }
+
+  #superfish-1-toggle,
+  #superfish-2-toggle {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+
+    &:before {
+      @include fa(bars);
+      font-size: 2.5rem;
+    }
+
+    &.sf-expanded {
+      &:before {
+        @include fa(times);
+        font-size: 2.5rem;
+      }
+    }
+
+    span {
+      @extend .sr-only;
+    }
+  }
+
+  // Shared styles
+  .sf-style-none {
+    @include clearfix;
+    overflow: visible;
+
+    li {
+      a {
+        padding: 1.2rem;
+        color: $sf-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          background: rgba(255,255,255,0.2);
+        }
+      }
+    }
+
+    // Dropdown items.
+    ul {
+      background-color: $dropdown-items-bg;
+      @extend .font-smoothing-on;
+      @include box-shadow(0px 0px 3px rgba(0,0,0,0.3));
+
+      li a {
+        color: #fff;
+      }
+    }
+  }
+
+  // Horizontal styles.
+  .sf-horizontal {
+    float: right;
+
+    li:hover > ul,
+    li.sfHover > ul {
+      top: $header-height;
+    }
+
+    a.sf-depth-1 {
+      font-weight: $fw-bold;
+      font-size: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      padding: 1.3em 1em;
+    }
+
+    a.sf-depth-1.menuparent {
+      position: relative;
+      padding-right: $anchor-padding-width + 2rem;
+
+      &:before {
+        @include fa(chevron-down);
+        font-size: 1rem;
+        margin-top: -0.7rem;
+        position: absolute;
+        right: $anchor-padding-width;
+        top: 50%;
+        color: darken($brand-grey, 20);
+      }
+
+      &.active {
+        background: transparent;
+      }
+    }
+  }
+
+  // Accordion styles.
+  .sf-accordion {
+    @extend .row;
+    width: auto !important;
+    float: none !important;
+    background: $accordion-items-bg;
+    border-top: 1px solid darken($accordion-items-bg, 6);
+
+    li {
+
+      &.sf-clone-parent > a.sf-depth-1 {
+        background: inherit;
+      }
+
+      a {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+        &.sf-depth-1 {
+          background: darken($accordion-items-bg, 3);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.header {
+  background-color: $brand-grey;
+  border-bottom: 6px solid darken($brand-grey, 10%);
+  margin: 0;
+  @extend .font-smoothing-on;
+  position: relative;
+
+  .navbar-branding {
+    display: block;
+    padding: 2rem 0;
+  }
+
+  .site-name {
+    color: $brand-white;
+  }
+
+  .header-navbar {
+    @include breakpoint(sf-expanded) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .site-name {
+    @extend .font-condensed;
+    font-size: 2rem;
+    font-weight: $fw-extrabold;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+
+.page-header {
+  margin: 0 0 18px;
+}
