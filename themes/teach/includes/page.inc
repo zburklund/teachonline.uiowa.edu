@@ -18,6 +18,10 @@ function teach_preprocess_page(&$vars) {
   else {
     $vars['page']['content']['#wrapper_classes'][] =  'col-md-12';
   }
+  // Add grid def for footer blocks.
+  foreach (element_children($vars['page']['footer']) as $name) {
+    $vars['page']['footer'][$name]['#wrapper_classes'][] =  'col-md-4';
+  }
 }
 
 /**
