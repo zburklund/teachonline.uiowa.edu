@@ -5,6 +5,7 @@ package = Teach Online
 dependencies[] = ctools
 dependencies[] = diff
 dependencies[] = features
+dependencies[] = features_override
 dependencies[] = jquery_update
 dependencies[] = menu_block
 dependencies[] = sitenow_wysiwyg
