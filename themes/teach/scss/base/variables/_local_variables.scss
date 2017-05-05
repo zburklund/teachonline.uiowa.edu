@@ -25,7 +25,7 @@ $toolbar-menu-and-drawer-height: $toolbar-drawer-height + $toolbar-menu-height;
 $ui-bar-height: 41px;
 
 // Site dependent Measurements.
-$header-height: 62px;
+$header-height: 80px;
 $primary-tabs-height: 37px;
 
 // Calculated measurements.
@@ -42,17 +42,23 @@ $main-wrapper-padding: 3rem;
 // Breakpoints
 $text-max-width: 900px;
 $sf-expanded: 960px;
+$bp-main-nav-expanded: 768px;
 
 // Region Background Colors.
+$body-bg: #fff;
 
 // Brand Colors.
-$brand-primary: #008080;
+$brand-primary: #286fac;
 $brand-secondary: #913d88;
-$brand-tertiary: #ba372a;;
-$brand-yellow: #ffce00;
-$brand-old-gold: #81642b;
+$brand-tertiary: #ba372a;
+$brand-white: #fff;
+$brand-yellow: #f6cf54;
+$brand-blue: #286fac;
+$brand-grey: #635e56;
+$brand-black: #2f2f2e;
 
 // Text color styles.
 $disabled-text: #888;
 $link-visited: $brand-secondary;
 $accessible-grey: #797676;
+$text-color: $brand-grey !default;
