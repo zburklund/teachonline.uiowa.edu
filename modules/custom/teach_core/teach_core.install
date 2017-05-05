@@ -81,4 +81,7 @@ function teach_core_install() {
     $query->values(array($module, $rid, $delta, $permission));
   }
   $query->execute();
+
+  // Set the default theme.
+  variable_set('theme_default', 'teach');
 }
