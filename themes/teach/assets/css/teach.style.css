@@ -7767,4 +7767,8 @@ body.cke_editable {
 .front #main-wrapper .page-header {
   display: none; }
 
+.layout-container {
+  padding-left: 0;
+  padding-right: 0; }
+
 /*# sourceMappingURL=teach.style.css.map */
