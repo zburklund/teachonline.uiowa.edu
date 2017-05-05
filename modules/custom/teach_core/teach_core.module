@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Code for the Teach Core feature.
+ */
+
+ include_once 'teach_core.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function teach_core_init() {
+  drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
+}

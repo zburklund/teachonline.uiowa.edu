@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * Place Superfish block.
+ */
+function teach_core_install() {
+  // Assign Superfish block to main_nav region.
+  $query = db_update('block')
+    ->fields(array('title' => '<none>', 'region' => ''))
+    ->condition('module', 'superfish')
+    ->condition('delta', '1')
+    ->execute();
+
+  $query = db_update('block')
+    ->fields(array(
+        'status' => 1,
+        'region' => 'main_nav',
+        'weight' => -13
+      ))
+    ->condition('module','superfish')
+    ->condition('delta', '1')
+    ->condition('theme', 'teach')
+    ->execute();
+
+  // Delete Article content type.
+  $machine_name = 'article';
+  node_type_delete($machine_name);
+  node_types_rebuild();
+
+  // Uninstall modules we're not using.
+  $modules = array(
+    'page_manager',
+    'panels',
+    'taxonomy',
+  );
+  module_disable($modules, $disable_dependents = FALSE);
+  drupal_uninstall_modules($modules);
+
+  // Add shortcut to manage blocks.
+  if (!module_exists('shortcut')) {
+    module_enable(array('shortcut'));
+  }
+
+  $menu_name = 'shortcut-set-1';
+
+  $item = array(
+    'link_path' => 'admin/structure/block',
+    'link_title' => 'Manage footer',
+    'menu_name' => $menu_name,
+    'router_path' => 'admin/structure/block',
+  );
+
+  menu_link_save($item);
+
+  // Configure access for blocks from block module.
+  if (!module_exists('block_access')) {
+    module_enable(array('block_access'));
+  }
+
+  $role = user_role_load_by_name('webmaster');
+  $rid = $role->rid;
+  $module = 'block';
+  $delta = '';
+  $permissions = array(
+    'config',
+    'config_body',
+    'config_desc',
+    'config_title',
+    'disable',
+    'dreg_content',
+    'dreg_main_nav',
+    'dreg_header',
+    'dreg_sidebar',
+    'enable',
+    'move',
+    'view',
+  );
+
+  $query = db_insert('block_access_roles')->fields(array('module', 'rid', 'delta', 'permission'));
+  foreach ($permissions as $permission) {
+    $query->values(array($module, $rid, $delta, $permission));
+  }
+  $query->execute();
+}
