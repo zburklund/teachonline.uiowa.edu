@@ -11,7 +11,7 @@
  */
 ?>
 <header id="header" class="header page-header" role="header">
-  <div class="container-smooth">
+  <div class="container-fluid">
     <nav class="header-navbar" role="navigation">
       <!-- Branding -->
       <?php if ($logo || $site_name || $site_slogan): ?>
@@ -44,29 +44,31 @@
               <?php print $breadcrumb; ?>
             </div>
           <?php endif; ?>
-          <?php if ($title): ?>
-            <h1 id="page-title" class="page-title">
-              <?php print $title; ?>
-            </h1>
-          <?php endif; ?>
-          <?php if ($tabs): ?>
-            <div id="primary-tabs" class="tabs">
-              <?php print render($tabs); ?>
-            </div>
-          <?php endif; ?>
-          <?php if ($action_links): ?>
-            <ul id="action-items" class="action-links">
-              <?php print render($action_links); ?>
-            </ul>
-          <?php endif; ?>
-          <?php if ($messages): ?>
-            <div id="messages" class="messages">
-              <?php print $messages; ?>
-            </div>
-          <?php endif; ?>
-          <?php if ($page['header']): ?>
-            <?php print render($page['header']); ?>
-          <?php endif; ?>
+          <div id="page-header">
+            <?php if ($title): ?>
+              <div class="page-header">
+                <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
+              </div>
+            <?php endif; ?>
+            <?php if ($tabs): ?>
+              <div id="primary-tabs" class="tabs">
+                <?php print render($tabs); ?>
+              </div>
+            <?php endif; ?>
+            <?php if ($action_links): ?>
+              <ul id="action-items" class="action-links">
+                <?php print render($action_links); ?>
+              </ul>
+            <?php endif; ?>
+            <?php if ($messages): ?>
+              <div id="messages" class="messages">
+                <?php print $messages; ?>
+              </div>
+            <?php endif; ?>
+            <?php if ($page['header']): ?>
+              <?php print render($page['header']); ?>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
     <?php endif; ?>
@@ -82,7 +84,9 @@
 <?php if ($page['footer']): ?>
   <footer id="footer" class="footer" role="footer">
     <div class="container-smooth">
-      <?php print render($page['footer']); ?>
+      <div class="row">
+        <?php print render($page['footer']); ?>
+      </div>
     </div>
   </footer>
 <?php endif; ?>
