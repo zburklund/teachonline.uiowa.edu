@@ -12,8 +12,8 @@ function teach_preprocess_page(&$vars) {
 
   // Add a grid definitions for '.main-content' regions.
   if (!empty($vars['page']['sidebar'])) {
-    $vars['page']['content']['#wrapper_classes'][] =  'col-md-8';
-    $vars['page']['sidebar']['#wrapper_classes'][] =  'col-md-4';
+    $vars['page']['content']['#wrapper_classes'][] =  'col-md-8 col-md-push-4';
+    $vars['page']['sidebar']['#wrapper_classes'][] =  'col-md-4 col-md-pull-8';
   }
   else {
     $vars['page']['content']['#wrapper_classes'][] =  'col-md-12';
