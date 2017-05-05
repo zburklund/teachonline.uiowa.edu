@@ -107,7 +107,7 @@ function teach_core_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'sitenow_wysiwyg_theme_css';
-  $strongarm->value = '%b%t/assets/css/dce_fs.style.css';
+  $strongarm->value = '%b%t/assets/css/teach.style.css';
   $export['sitenow_wysiwyg_theme_css'] = $strongarm;
 
   $strongarm = new stdClass();
