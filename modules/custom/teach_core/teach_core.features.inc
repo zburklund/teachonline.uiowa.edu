@@ -31,6 +31,28 @@ function teach_core_filter_default_formats_alter(&$data) {
     $data['filtered_html']['filters']['wysiwyg']['settings']['rule_valid_classes'][4] = 'text'; /* WAS: '' */
     $data['filtered_html']['filters']['wysiwyg']['settings']['rule_valid_classes'][6] = 'btn-*'; /* WAS: '' */
     $data['filtered_html']['filters']['wysiwyg']['settings']['rule_valid_classes'][8] = 'fa'; /* WAS: '' */
+    $data['filtered_html']['filters']['wysiwyg']['settings']['valid_elements'] = '@[class|style|title],
+    a[href|target|title|name|rel],
+    img[style|src|width|height|alt|title],
+    em, strong, strike, s, del, sub, sup, i, b, q[cite], acronym, abbr , samp, kbd,
+    ul, ol[start], li, dl, dt, dd,
+    p[align<center?justify?left?right], br, hr,
+    div[align<center?justify?left?right], span,
+    table[width|cellpadding|cellspacing|border|align|summary], tr[align|valign], td[align|valign|width|colspan|rowspan], tbody, th[align|valign|width|colspan|rowspan|scope], thead, tfoot, colgroup, col, caption,
+    address, blockquote, pre, cite, code,
+    h1, h2, h3, h4, h5, h6,
+    figure, figcaption,
+    small'; /* WAS: '@[class|style|title],
+    a[href|target|title|name|rel],
+    img[style|src|width|height|alt|title],
+    em, strong, strike, s, del, sub, sup, i, b, q[cite], acronym, abbr , samp, kbd,
+    ul, ol[start], li, dl, dt, dd,
+    p[align<center?justify?left?right], br, hr,
+    div[align<center?justify?left?right], span,
+    table[width|cellpadding|cellspacing|border|align|summary], tr[align|valign], td[align|valign|width|colspan|rowspan], tbody, th[align|valign|width|colspan|rowspan|scope], thead, tfoot, colgroup, col, caption,
+    address, blockquote, pre, cite, code,
+    h1, h2, h3, h4, h5, h6,
+    figure, figcaption' */
   }
 }
 

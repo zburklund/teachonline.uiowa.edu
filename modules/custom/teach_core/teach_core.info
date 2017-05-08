@@ -28,6 +28,7 @@ features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|r
 features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|4
 features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|6
 features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|8
+features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|valid_elements
 features[features_overrides][] = wysiwyg.filtered_html.settings|advanced__active_tab
 features[features_overrides][] = wysiwyg.filtered_html.settings|buttons|btbutton
 features[features_overrides][] = wysiwyg.filtered_html.settings|buttons|layoutmanager
