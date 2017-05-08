@@ -12,6 +12,11 @@ function teach_core_features_override_default_overrides() {
   $overrides = array();
 
   // Exported overrides for: filter
+  $overrides["filter.filtered_html.filters|pathologic|settings|local_paths"] = 'teachonline.uiowa.edu.dd
+  teachonline.dev.drupal.uiowa.edu
+  teachonline.stage.drupal.uiowa.edu
+  teachonline.prod.drupal.uiowa.edu
+  teachonline.uiowa.edu';
   $overrides["filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|0"] = 'bs-*';
   $overrides["filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|10"] = 'fa-*';
   $overrides["filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|12"] = 'col-md-*';

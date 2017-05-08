@@ -18,6 +18,11 @@ function teach_core_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function teach_core_filter_default_formats_alter(&$data) {
   if (isset($data['filtered_html'])) {
+    $data['filtered_html']['filters']['pathologic']['settings']['local_paths'] = 'teachonline.uiowa.edu.dd
+    teachonline.dev.drupal.uiowa.edu
+    teachonline.stage.drupal.uiowa.edu
+    teachonline.prod.drupal.uiowa.edu
+    teachonline.uiowa.edu'; /* WAS: '' */
     $data['filtered_html']['filters']['wysiwyg']['settings']['rule_valid_classes'][0] = 'bs-*'; /* WAS: 'plain-button' */
     $data['filtered_html']['filters']['wysiwyg']['settings']['rule_valid_classes'][10] = 'fa-*'; /* WAS: '' */
     $data['filtered_html']['filters']['wysiwyg']['settings']['rule_valid_classes'][12] = 'col-md-*'; /* WAS: '' */

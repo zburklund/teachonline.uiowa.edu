@@ -15,6 +15,7 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[features_override_items][] = filter.filtered_html
 features[features_override_items][] = wysiwyg.filtered_html
+features[features_overrides][] = filter.filtered_html.filters|pathologic|settings|local_paths
 features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|0
 features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|10
 features[features_overrides][] = filter.filtered_html.filters|wysiwyg|settings|rule_valid_classes|12
