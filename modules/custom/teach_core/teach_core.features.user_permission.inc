@@ -1012,9 +1012,7 @@ function teach_core_user_default_permissions() {
   // Exported permission: 'edit meta tag: image_src'.
   $permissions['edit meta tag: image_src'] = array(
     'name' => 'edit meta tag: image_src',
-    'roles' => array(
-      'webmaster' => 'webmaster',
-    ),
+    'roles' => array(),
     'module' => 'metatag',
   );
 
