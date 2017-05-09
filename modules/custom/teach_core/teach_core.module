@@ -12,3 +12,19 @@
 function teach_core_init() {
   drupal_add_http_header('X-UA-Compatible', 'IE=edge,chrome=1');
 }
+
+/**
+ * Implements hook_menu_alter()
+ */
+function teach_core_menu_alter(&$items) {
+  // This is required until issue https://www.drupal.org/node/2078423
+  // in Redirect module is fixed.
+  $items['admin/config/search/redirect/settings']['access callback'] = '_teach_core_redirect_settings_access_callback';
+}
+
+function _teach_core_redirect_settings_access_callback(){
+  global $user;
+
+  // Forbid access for roles different than administrator.
+  return (in_array('administrator', array_values($user->roles))) ? TRUE : FALSE;
+}

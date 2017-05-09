@@ -332,6 +332,16 @@ function teach_core_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer redirects'.
+  $permissions['administer redirects'] = array(
+    'name' => 'administer redirects',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'redirect',
+  );
+
   // Exported permission: 'administer robots.txt'.
   $permissions['administer robots.txt'] = array(
     'name' => 'administer robots.txt',
